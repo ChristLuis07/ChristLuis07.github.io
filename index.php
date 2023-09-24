@@ -1,3 +1,13 @@
+<?php 
+session_start();
+if ( !isset($_SESSION["login"] ) ) {
+    header("Location: login.php");
+    exit;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,6 +46,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">LOG Out</a>
             </li>
           </ul>
         </div>
