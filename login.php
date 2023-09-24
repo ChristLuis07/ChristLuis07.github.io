@@ -5,7 +5,7 @@
 
 session_start();
 if (isset($_SESSION["login"]) ) {
-    header("Location:index.php");
+    header("Location:index.html");
     exit;
 }
 require 'LoginFunction.php';
@@ -26,7 +26,7 @@ if ( isset($_POST["login"]) ) {
        if (password_verify($password, $row["password"]) ) {
         // set session 
         $_SESSION["login"] = true;
-        header("Location: index.php");
+        header("Location: index.html");
         exit;
        }
        }
